@@ -1,0 +1,7 @@
+# editor generated backup files
+.backup
+.bak
+~$
+
+# code
+**/node_modules

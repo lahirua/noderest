@@ -1,0 +1,22 @@
+{
+  "name": "bookapi",
+  "version": "1.0.0",
+  "description": "Restful webservices with Node.js and Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lahirua/noderest.git"
+  },
+  "author": "Lahiru Ananda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lahirua/noderest/issues"
+  },
+  "homepage": "https://github.com/lahirua/noderest#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
