@@ -20,10 +20,6 @@ bookRouter.route('/Books')
         response.json(books);
       }
     });
-    // var responseJson = {
-    //   hello: "This is my API"
-    // }
-    // response.json(responseJson);
   });
 
 app.use('/api', bookRouter);
