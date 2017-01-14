@@ -1,5 +1,6 @@
 var express = require('express');
 var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
 
 var db = mongoose.connect('mongodb://localhost/bookAPI');
 var Book = require('./models/bookModel');
@@ -8,10 +9,17 @@ var app = express();
 
 var port = process.env.PORT || 3000;
 
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 //create router to be used bt Books API
 var bookRouter = express.Router();
 
 bookRouter.route('/Books')
+  .post(function(request, response){
+    var book = new Book(request.body);
+    book.save();
+    response.status(201).send(book);
+  })
   .get(function(request, response){
     //create query
     var query = {};
